@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="accessibleName">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleDescription">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleIdentifier">
+         <string/>
+        </property>
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <widget class="QWidget" name="tabStudentProfile">
+         <attribute name="title">
+          <string>Student Profile</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QGroupBox" name="grpCourses">
+            <property name="title">
+             <string>Courses Detected</string>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QPushButton" name="btnUploadTranscript">
+               <property name="text">
+                <string>Upload Transcript CSV</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>21</width>
+                 <height>16</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnLoadCatalog">
+               <property name="text">
+                <string>Load Course Catalog</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="tblStudentCourses">
+               <attribute name="horizontalHeaderDefaultSectionSize">
+                <number>180</number>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>Course</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Grade</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Style Tags</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="grpStudentProfile">
+               <property name="title">
+                <string>Inferred Learning Style</string>
+               </property>
+               <layout class="QFormLayout" name="formLayout_2">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="lblWriting">
+                  <property name="text">
+                   <string>Writing-heavy:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QProgressBar" name="barWriting">
+                  <property name="value">
+                   <number>24</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="lblInteractive">
+                  <property name="text">
+                   <string>Interactive:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QProgressBar" name="barInteractive">
+                  <property name="value">
+                   <number>24</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="lblExam">
+                  <property name="text">
+                   <string>Exam-based:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QProgressBar" name="barExam">
+                  <property name="value">
+                   <number>24</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="lblLecture">
+                  <property name="text">
+                   <string>Lecture:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QProgressBar" name="barLecture">
+                  <property name="value">
+                   <number>24</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Policy::Ignored</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabTeacherProfiles">
+         <attribute name="title">
+          <string>Teacher Profiles</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QGroupBox" name="grpTeachers">
+            <property name="title">
+             <string>Teachers</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QPushButton" name="btnLoadSyllabi">
+               <property name="text">
+                <string>Load Syllabi Folder</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnLoadReviews">
+               <property name="text">
+                <string>Load Reviews CSV</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="tblTeachers">
+               <attribute name="horizontalHeaderDefaultSectionSize">
+                <number>235</number>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>Name</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Course</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Style Tags</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="grpTeacherProfile">
+               <property name="title">
+                <string>Teaching Style (Selected Teacher)</string>
+               </property>
+               <layout class="QFormLayout" name="formLayout">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="lblTeachLecture">
+                  <property name="text">
+                   <string>Lecture:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QProgressBar" name="barTeachLecture">
+                  <property name="value">
+                   <number>24</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="lblTeachInteractive">
+                  <property name="text">
+                   <string>Interactive:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QProgressBar" name="barTeachInteractive">
+                  <property name="value">
+                   <number>24</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="lblTeachWriting">
+                  <property name="text">
+                   <string>Writing:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="lblTeachExams">
+                  <property name="text">
+                   <string>Exams:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QProgressBar" name="barTeachWriting">
+                  <property name="value">
+                   <number>24</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QProgressBar" name="barTeachExams">
+                  <property name="value">
+                   <number>24</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout"/>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabMatches">
+         <property name="accessibleName">
+          <string notr="true"/>
+         </property>
+         <attribute name="title">
+          <string>Matches</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QWidget" name="widget_2" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="lblCourse">
+               <property name="text">
+                <string>Course:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="editCourseSearch"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnFindMatch">
+               <property name="text">
+                <string>Find Best Match</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="grpMatches">
+            <property name="title">
+             <string>Recommended Professors</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <widget class="QTableWidget" name="tblMatches">
+               <attribute name="horizontalHeaderDefaultSectionSize">
+                <number>175</number>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>Rank</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Professor</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Match Score</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Why It Fits</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
